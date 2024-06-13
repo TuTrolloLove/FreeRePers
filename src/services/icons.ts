@@ -1,3 +1,8 @@
+type APIIcons = {
+    name: string;
+    url_photo: string;
+    link: string;
+};
 
 export const getIcons = async (): Promise<APIIcons[]> => {
 

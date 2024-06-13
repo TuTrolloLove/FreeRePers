@@ -1,3 +1,9 @@
+type APIFonts = {
+    name: string;
+    url_photo: string;
+    link: string;
+};
+
 export const getFonts = async (): Promise<APIFonts[]> => {
 
     const fontsData: APIFonts[] = [{

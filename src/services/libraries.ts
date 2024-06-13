@@ -1,3 +1,9 @@
+type APILibraries = {
+    name: string;
+    url_photo: string;
+    link: string;
+};
+
 export const getLibraries = async (): Promise<APILibraries[]> => {
 
     const librariesData: APILibraries[] = [{
