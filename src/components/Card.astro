@@ -1,20 +1,25 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	name: string;
 	url_photo: string;
+	alt: string;
 	url_link: string;
 }
 
-const { name, url_link, url_photo } = Astro.props;
+const { name, url_link, alt, url_photo } = Astro.props;
 ---
 
 <li
   class="link-card flex flex-col max-w-[80%] md:w-64 scale-125 mb-16 rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-135 hover:bg-gray-700 hover:border-gray-500 transition mx-auto"
 >
-  <img
+  <Image
     class="aspect-video object-cover duration-300 group-hover:scale-[1.03] -z-10 transition-transform inline-block w-full"
     src=`${url_photo}`
-    alt=""
+    alt=`${alt}`
+	width={200}
+	height={200}
   />
   <h2 class="text-center text-white font-bold text-xl mt-4 mb-2">
     {name}
