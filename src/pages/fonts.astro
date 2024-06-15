@@ -3,15 +3,18 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 import { getFonts } from "../services/fonts";
 
-const icons = await getFonts();
+const fonts = await getFonts();
 ---
 
-<Layout title="Free Fonts Resources">
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {
-            icons.map(({ name, url_photo, alt, link }) => (
-                <Card name={name} url_photo={url_photo} alt={alt} url_link={link} />
-            ))
-        }
-    </div>
+<Layout title="Free Icons Resources">
+    <div class="flex flex-col items-center justify-start"> {/* Add these classes */}
+        <h2 class="text-white text-3xl font-bold mb-8">Fonts</h2>
+        <div class="grid gap-16 sm:grid-cols-2 lg:grid-cols-3">
+            {
+                fonts.map(({ name, url_photo, alt, link }) => (
+                    <Card name={name} url_photo={url_photo} alt={alt} url_link={link} />
+                ))
+            }
+        </div>
+    </div> {/* Closing the new div */}
 </Layout>

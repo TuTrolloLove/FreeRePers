@@ -1,5 +1,7 @@
 ---
 import HeaderButton from "./HeaderButton.astro";
+const currentPath = Astro.url.pathname;
+console.log(currentPath)
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
@@ -17,7 +19,7 @@ import HeaderButton from "./HeaderButton.astro";
     <nav
         class="flex flex-col items-center justify-between w-full text-center md:flex-row"
     >
-        <HeaderButton class="text-white" href="icons">
+        <HeaderButton class={`text-white`} href="/">
             <svg
                 width="24"
                 height="24"
