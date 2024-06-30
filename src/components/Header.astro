@@ -1,14 +1,16 @@
 ---
 import HeaderButton from "./HeaderButton.astro";
 const currentPath = Astro.url.pathname;
-console.log(currentPath)
+console.log(currentPath);
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
     <!-- Padding arriba y abajo de 8, horizontal de 4  -->
     <div class="mk-auto text-center mb-8 lg:mb-16">
         <a href="/">
-            <h1 class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+            <h1
+                class="mb-4 text-5xl tracking-tight font-extrabold text-black/80 dark:text-white"
+            >
                 FreeRePers
             </h1>
         </a>

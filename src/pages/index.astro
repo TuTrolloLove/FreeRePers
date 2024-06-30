@@ -12,7 +12,12 @@ const icons = await getIcons();
         <div class="grid gap-16 sm:grid-cols-2 lg:grid-cols-3">
             {
                 icons.map(({ name, url_photo, alt, link }) => (
-                    <Card name={name} url_photo={url_photo} alt={alt} url_link={link} />
+                    <Card
+                        name={name}
+                        url_photo={url_photo}
+                        alt={alt}
+                        url_link={link}
+                    />
                 ))
             }
         </div>

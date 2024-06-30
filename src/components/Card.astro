@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
 	name: string;
@@ -12,23 +12,21 @@ const { name, url_link, alt, url_photo } = Astro.props;
 ---
 
 <li
-  class="link-card flex flex-col max-w-[90%] md:w-64 scale-125 mb-16 rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-135 hover:bg-gray-700 hover:border-gray-500 transition mx-auto"
+	class="link-card flex flex-col max-w-[80%] md:w-64 scale-125 mb-16 rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-135 hover:bg-gray-700 hover:border-gray-500 transition mx-auto"
 >
-  <Image
-    class="aspect-video object-cover duration-300 group-hover:scale-[1.03] -z-10 transition-transform inline-block w-full"
-    src=`${url_photo}`
-    alt=`${alt}`
-	width={200}
-	height={200}
-  />
-  <h2 class="text-center text-white font-bold text-xl mt-4 mb-2">
-    {name}
-  </h2>
-  <button
-    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
-  >
-    <a href=`${url_link}`>GO</a>
-  </button>
+	<Image
+		class="aspect-video object-cover duration-300 group-hover:scale-[1.03] -z-10 transition-transform inline-block w-full"
+		src=`${url_photo}`
+		alt=`${alt}`
+		width={200}
+		height={200}
+	/>
+	<h2 class="text-center text-white font-bold text-xl mt-4 mb-2">
+		{name}
+	</h2>
+	<button class="bg-blue-500 text-white font-bold py-2 px-4 rounded mt-2">
+		<a href=`${url_link}`>GO</a>
+	</button>
 </li>
 
 <style>
@@ -66,8 +64,5 @@ const { name, url_link, alt, url_photo } = Astro.props;
 	.link-card:is(:hover, :focus-within) {
 		background-position: 0;
 		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
 	}
 </style>
