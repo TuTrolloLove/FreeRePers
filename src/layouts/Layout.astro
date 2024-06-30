@@ -21,15 +21,17 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
+	<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-960 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 	<body class="bg-gray-900 min-h-screen pb-32">
+		
 		<Header />
 		<main class="max-w-5xl px-4 m-auto">
 			<slot />
 		</main>
+	
 	</body><style is:global>
 		html {
 			font-family: system-ui, sans-serif;
-			background: #13151a;
 			background-size: 224px;
 			color-scheme: dark light; /* Para que use el modo oscuro y la letra se vea blanca */
 		}
