@@ -10,7 +10,7 @@ export const getIcons = async (): Promise<APIIcons[]> => {
     const iconsData: APIIcons[] = [
         {
             name: "Google Icons",
-            url_photo: "https://lh3.googleusercontent.com/d/1xG_okYdhB43v8JB2kyQ0iqZFUjQnGUYM=s1980?authuser=1980",
+            url_photo: "https://lh3.googleusercontent.com/d/1-NtxnkIcCnCQumWz37raA0Tqdla8EneL",
             alt: "Google Icons Web Image",
             link: "https://fonts.google.com/icons"
         },
